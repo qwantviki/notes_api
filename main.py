@@ -31,3 +31,8 @@ def create_note(note_data: NoteIn):
     if note is None:
         return {"error": "Note is not valid (title/author empty or content too long)"}
     return note.to_dict()
+
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="127.0.0.1", port=8000)
